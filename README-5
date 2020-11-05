@@ -1,0 +1,102 @@
+FOR Assignment2.CPP make sure out2.txt and data2.txt are in the same folder
+
+compile using g++ Assignment2.CPP
+and run using ./a.out
+
+###############################################################################################################
+
+IN DATA2.TXT THE GRAPH MUST BE REPRESENTED IN AN ADJACENCY LIST LIKE TOLD IN THE INSTRUCTIONS.
+THAT MEANS FOR A GRAPH LIKE THE FOLLOWING:
+1 2
+2 4
+3 4
+4 5
+5
+YOU NEED TO SPECIFY THAT THOSE NODES CAN ALSO GO IN THE OPPOSITE DRIECTION:
+1 2
+2 1 4
+3 4
+4 2 3 5 
+5 4
+
+One of the examples the TA gave had a graph like the above and when that is entered
+it will return that it is NOT connected because if read like the adjacency list it is supposed to be
+than some verticies will not have a path to them which fails the definition of a connected graph.
+
+
+If you have any questions feel free to contact me via school email.
+
+###############################################################################################################
+
+Compilation Example:
+
+jar0574@cse02:~/CSCE3110$ g++ Assignment2.cpp
+jar0574@cse02:~/CSCE3110$ ./a.out
+
+Taking in information from data2.txt ....
+
+Performing BFS on given data....
+
+Program is complete! Please check out2.txt for results
+
+jar0574@cse02:~/CSCE3110$
+
+
+###############################################################################################################
+
+output examples:
+
+data2.txt:
+1 2
+2 1 4
+3 4
+4 5 
+5 
+
+out2.txt:
+Graph is NOT connected
+
+###############################################################################################################
+
+data2.txt:
+1 2
+2 1 4
+3 4
+4 2 3 5 
+5 4
+
+out2.txt:
+Graph IS conncected
+
+###############################################################################################################
+
+data2.txt:
+1 3 4
+2 4
+3 1 4
+4 2 1 3 
+
+out2.txt
+Graph IS connected
+
+###############################################################################################################
+
+data2.txt:
+1 2 4
+2 1 3
+3 2 4
+4 1 3 
+
+out2.txt:
+Graph IS connected
+
+###############################################################################################################
+
+data2.txt:
+1 2
+2 1
+3 4
+4 3
+
+out2.txt:
+Graph is NOT connected
